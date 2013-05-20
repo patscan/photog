@@ -1,15 +1,1 @@
-= form_for @user do |f|
-  .textfield
-    = f.label :username, "username:"
-  .textfield
-    = f.text_field :username, :placeholder => "e.g., joe21"
-  .textfield
-    = f.label :email, "email"
-  .textfield
-    = f.text_field :email, :placeholder => "e.g., joe@example.com"
-  .textfield
-    = f.label :password, "password"
-  .textfield
-    = f.text_field :password, :placeholder => "e.g., 1xh75lo@"
-  .textfield
-    = f.submit "submit"
+= render "shared/user_form"

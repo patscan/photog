@@ -1,10 +1,13 @@
 Photog::Application.routes.draw do
   root :to => "static_pages#home"
-  match '/login' => 'static_pages#login'
 
   resources :users, :only => [:index, :new, :create, :show]
   resources :photos, :except => [:index]
   resources :albums
+
+  match "/login", to: "sessions#new"
+  match "/sessions", to: "sessions#create"
+  match "/logout", to: "sessions#destroy"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
