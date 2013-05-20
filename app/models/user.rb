@@ -6,7 +6,13 @@ class User < ActiveRecord::Base
   validates_presence_of :username, :email
   validates_uniqueness_of :username, :email
 
+  mount_uploader :avatar, AvatarUploader
+
+  has_many :albums
+  has_many :photos, :through => :albums
+
   def self.authenticate(email, password)
     find_by_email(email).try(:authenticate, password)
   end
+
 end
