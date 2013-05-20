@@ -1,4 +1,5 @@
 # encoding: utf-8
+require 'carrierwave/orm/activerecord'
 
 class ImageUploader < CarrierWave::Uploader::Base
 

@@ -6,7 +6,7 @@ class User < ActiveRecord::Base
   validates_presence_of :username, :email
   validates_uniqueness_of :username, :email
 
-  mount_uploader :avatar, AvatarUploader
+  mount_uploader :image, ImageUploader
 
   has_many :albums
   has_many :photos, :through => :albums

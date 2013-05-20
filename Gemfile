@@ -7,7 +7,6 @@ gem 'rails', '3.2.13'
 
 gem 'pg'
 
-
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
@@ -27,13 +26,13 @@ group :development, :test do
 end
 
 gem 'carrierwave'
+gem 'rmagick', '2.13.2'
+gem 'mini_magick'
 
 gem 'haml', '~> 4.0.2'
 
 # To use ActiveModel has_secure_password
 gem 'bcrypt-ruby', '~> 3.0.0'
-
-
 
 
 # To use Jbuilder templates for JSON
