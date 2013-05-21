@@ -1,0 +1,11 @@
+= form_for @session, url: sessions_path do |f|
+  .textfield
+    = f.label :email, "email"
+  .textfield
+    = f.text_field :email, :placeholder => "e.g., joe@example.com"
+  .textfield
+    = f.label :password, "password"
+  .textfield
+    = f.password_field :password, :placeholder => "e.g., 1xh75lo@"
+  .textfield
+    = f.submit "submit"
