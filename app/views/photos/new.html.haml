@@ -1,0 +1,4 @@
+= form_for :album, url: albums_path do |f|
+  = f.label :filepicker_url, "Upload your photo:"
+  = f.filepicker_field :filepicker_url
+  = f.submit "submit"

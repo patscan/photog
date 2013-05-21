@@ -1,7 +1,10 @@
 %h1 
   #{@user.username}'s profile
 
+= link_to "create an album", new_album_path
+
 - if @user.albums != nil 
   - @user.albums.each do |album|
     = album.title
+
 
